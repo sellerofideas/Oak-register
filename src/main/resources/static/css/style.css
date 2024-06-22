@@ -1,0 +1,108 @@
+/* Reset de estilos básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis de cores da Oak Tecnologia */
+:root {
+    --primary: #0bb783;
+    --secondary: #e4e6ef;
+    --success: #0bb783;
+    --info: #8950fc;
+    --warning: #ffa800;
+    --danger: #dc3545;
+    --light: #f3f6f9;
+    --dark: #1e2326;
+    --white: #ffffff;
+    --gray: #7e8299;
+    --gray-dark: #3f4254;
+    --blue: #007bff;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Open Sans', sans-serif; /* Usando a fonte especificada */
+    line-height: 1.6;
+    background-color: var(--light); /* Cor de fundo geral */
+    color: var(--text-theme-color1); /* Cor do texto principal */
+    padding: 20px;
+}
+
+h1 {
+    color: var(--primary); /* Cor do título principal */
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    color: var(--blue); /* Cor dos links */
+    text-decoration: none;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid var(--gray-dark); /* Cor das bordas da tabela */
+}
+
+thead {
+    background-color: var(--dark); /* Cor de fundo do cabeçalho da tabela */
+    color: var(--white); /* Cor do texto do cabeçalho da tabela */
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--secondary); /* Cor de fundo das linhas pares da tabela */
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 20px;
+    border: 1px solid var(--gray);
+    border-radius: var(--bd-radius-sm);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--text-theme-color1); /* Cor dos rótulos do formulário */
+}
+
+form input, form select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--gray);
+    border-radius: var(--bd-radius-sm);
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: var(--primary); /* Cor do botão */
+    color: var(--white); /* Cor do texto do botão */
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--success); /* Cor do botão ao passar o mouse */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    form {
+        padding: 10px;
+    }
+}
